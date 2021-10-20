@@ -3,14 +3,9 @@
   "use strict";
 
 //======= Run on Window Load ============
-$('.loading-wrapper').css({'visibility': 'visible'}).animate({opacity: '1'}, 600);
+$('').css({'visibility': 'visible'}).animate({opacity: '1'});
 $(window).load(function(){ 
 
-  //loader and Intro Animations
-  $('.animated').css({'opacity': 0});
-	$('#page-loader').delay(1000).fadeOut(400, function(){
-	  $('#body').addClass('fadeInUp');
-	}); 	
   
 
   //Viewport
@@ -90,20 +85,7 @@ $(".hd-list-menu li a").each(function() {
 });
 
 //Fade Between Links
-var newLocation = '';
-$('.hd-list-menu a').on('click', function(event)  {
 
-  event.preventDefault();
-
-  newLocation = this.href;
-
-  $('body').fadeOut(300, newpage);
-
-});
-
-function newpage() {
-  window.location = newLocation;
-}
 
 
 //Nivo Lightbox
